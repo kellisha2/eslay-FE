@@ -1,12 +1,13 @@
 import React from 'react'
+import Navbar from '../Header/Navbar'
 import ProductCard from './ProductCard'
 
 function ProductPage() {
   return (
     <div className='productPage'>ProductPage
 
-
-        <ProductCard />
+      <Navbar />  
+      <ProductCard />
 
     </div>
   )

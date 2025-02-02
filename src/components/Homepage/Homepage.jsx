@@ -1,8 +1,14 @@
 import React from 'react'
+import Navbar from '../Header/Navbar'
+import Banner from './Banner'
+
 
 function Homepage() {
   return (
-    <div>Homepage</div>
+    <div>
+      <Navbar />
+      <Banner />
+    </div>
   )
 }
 
