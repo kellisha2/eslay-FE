@@ -1,8 +1,8 @@
 import React from 'react'
-// import { Link } from 'react-router-dom';
-// import { HiOutlineShoppingBag } from "react-icons/hi2";
-// import { GrFavorite } from "react-icons/gr";
-// import { VscAccount } from "react-icons/vsc";
+import { Link } from 'react-router-dom';
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { GrFavorite } from "react-icons/gr";
+import { VscAccount } from "react-icons/vsc";
 
 
 
@@ -43,15 +43,15 @@ function Navbar() {
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     <button className="btn btn-outline-success" type="submit">Search</button>
                 </form>
-                {/* <Link to="/"> <HiOutlineShoppingBag /> </Link> */}
-                {/* <GrFavorite /> */}
-                {/* <VscAccount /> */}
+                <Link to="/"> <HiOutlineShoppingBag /> </Link>
+                <GrFavorite />
+                <VscAccount />
 
 
 
             </nav>
 
-           
+
         </div>
     )
 }

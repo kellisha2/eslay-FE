@@ -6,7 +6,6 @@ import Banner from './Banner'
 function Homepage() {
   return (
     <div>
-      <Navbar />
       <Banner />
     </div>
   )
