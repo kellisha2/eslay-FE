@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function ProductCard() {
+function ProductCard({ product }) {
   return (
     <div className='product'>
-      <img src=''/>
-      <p></p>  
-      <span></span>  
+      <Link to="/">
+        <img src={product.img} alt={product.name} />
+        <h3>{product.name}</h3>
+        <p>{product.price}</p>
+      </Link>
     </div>
   )
 }

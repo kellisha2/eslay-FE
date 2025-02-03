@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import Homepage from "./components/Homepage/Homepage"
 import ProductPage from "./components/ProductPage/ProductPage"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AddProduct from "./components/ManageListings/addProduct";
 import Navbar from "./components/Header/Navbar";
 
+// 1. createContext
+export const MyProductsContext = createContext();
+
+
 function App() {
-  const [ products, setProducts ] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const getProducts = async () => {
     try {
@@ -26,14 +30,17 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/allproducts" element={<ProductPage produc/>} />
-        <Route path="/addproduct" element={<AddProduct />} />
-      </Routes>
-    </BrowserRouter>
+    <MyProductsContext.Provider value={{ products, setProducts }}>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/products" element={<ProductPage />} />
+          <Route path="/addproduct" element={<AddProduct />} />
+        </Routes>
+      </BrowserRouter>
+    </MyProductsContext.Provider>
+
   )
 }
 
