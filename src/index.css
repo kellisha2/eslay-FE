@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: ;
+}
+
+
 .background {
     height: 100%;
     width: 100%;
@@ -32,4 +39,40 @@
     width: fit-content;
     margin-top: 70px;
     padding: 5px 8px;
+    padding-left: 30px;
+    border-radius: 60px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.how p {
+    color:black;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.hero-page-move {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-dots {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.hero-dot {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hero-dot.orange{
+    background-color: orangered;
 }

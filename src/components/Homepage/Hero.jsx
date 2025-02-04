@@ -9,8 +9,8 @@ const Hero = ({heroData, setHeroCount, heroCount}) => {
         </div>
 
         <div className="how">
-            <p>How It Works</p>
-            <img src='arrow' />
+            <a><p>How It Works</p></a>
+            
         </div>
         <div className='hero-page-move'>
             <ul className='hero-dots'>
