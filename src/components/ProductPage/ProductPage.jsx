@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import Navbar from '../Header/Navbar'
 import ProductCard from './ProductCard'
 import { MyProductsContext } from '../../App'
 

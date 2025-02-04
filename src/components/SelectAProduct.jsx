@@ -1,16 +1,16 @@
 import React from 'react'
 
-function SelectAProduct() {
+function SelectAProduct({product}) {
   return (
     <div>
         <section className='images'>
-            <img src="" alt="" /><img src="" alt="" /><img src="" alt="" />
+            <img src={product.img} alt={product.name}/>
         </section>
         <section className='item-details'>
-            <h2>name</h2>
-            <span>price</span>
-            <p>description</p>
-            <p>size</p>
+            <h2>{product.name}</h2>
+            <span>{product.price}</span>
+            <p>{product.description}</p>
+            <p>{product.size}</p>
         </section>
 
 
