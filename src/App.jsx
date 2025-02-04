@@ -27,7 +27,7 @@ function App() {
 
   ]
 
-  const [heroCount, setHeroCount] = useState(0);
+  const [heroCount, setHeroCount] = useState(2);
 
   const [products, setProducts] = useState([]);
 
@@ -54,7 +54,7 @@ function App() {
         <Background heroCount={heroCount}/>
         <Navbar />
         <Hero 
-              heroData={heroData}
+              heroData={heroData[heroCount]}
               heroCount={heroCount} 
               setHeroCount={setHeroCount}
         />

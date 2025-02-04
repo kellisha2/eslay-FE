@@ -12,3 +12,24 @@
     z-index: -1;
 
 }
+
+.hero {
+    margin: 0px 120px;
+    margin-top: 270px;
+}
+
+.hero-text {
+    color: black;
+    font-size: 110px;
+    font-weight: 500;
+    line-height: 130px;
+}
+
+.how {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: fit-content;
+    margin-top: 70px;
+    padding: 5px 8px;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import sellclothes from "../../assets/sellclothes.jpg";
+import firstpic from "../../assets/firstpic.jpg";
 import womancloset from '../../assets/womancloset.jpg'
 import makemoney from '../../assets/makemoney.webp'
 
@@ -7,7 +7,7 @@ const Background = ({ heroCount }) => {
 
     if (heroCount=== 0) {
         return (
-            <img src={sellclothes} className='background' />
+            <img src={firstpic} className='background' />
         )
     } else if (heroCount === 1) {
         return (
