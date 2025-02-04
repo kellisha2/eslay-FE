@@ -10,6 +10,7 @@ import "../src/components/Header/header.css"
 import MenProducts from "./components/ProductPage/MenProducts";
 import Accessories from "./components/ProductPage/Accessories";
 import Background from "./components/Background/Background";
+import Hero from "./components/Homepage/Hero";
 
 
 
@@ -26,7 +27,7 @@ function App() {
 
   ]
 
-  const [heroCount, setHeroCount] = useState(2);
+  const [heroCount, setHeroCount] = useState(0);
 
   const [products, setProducts] = useState([]);
 
@@ -49,8 +50,14 @@ function App() {
   return (
     <MyProductsContext.Provider value={{ products, setProducts }}>
       <BrowserRouter>
-        <Navbar />
+        
         <Background heroCount={heroCount}/>
+        <Navbar />
+        <Hero 
+              heroData={heroData}
+              heroCount={heroCount} 
+              setHeroCount={setHeroCount}
+        />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/products" element={<ProductPage />} />

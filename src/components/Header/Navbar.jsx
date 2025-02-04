@@ -6,7 +6,7 @@ import { VscAccount } from "react-icons/vsc";
 // import { assets } from '../../assets/assets';
 import { NavLink } from 'react-router-dom';
 // import "../src/components/Header/header.css"
-
+import logo from '../../assets/logo.jpg'
 
 
 
@@ -16,14 +16,14 @@ import { NavLink } from 'react-router-dom';
 function Navbar() {
     return (
         <div className='navbar'>
-            {/* <img src={assets.logo} style={{width: "40px"}} /> */}
+            <img src={logo} style={{width: "100px"}} />
 
             <ul className="navbar-links">
                 <NavLink to="/" className="nav-link">Home</NavLink>
-                <NavLink to="/products/women" className="nav-link">Women</NavLink>
-                <NavLink to="/products/men" className="nav-link">Men</NavLink>
-                <NavLink to="/products/accessories" className="nav-link">Accessories</NavLink>
-                <NavLink to="/collections" className="nav-link">Collections</NavLink>
+                <NavLink to="/allproducts" className="nav-link">Shop</NavLink>
+                <NavLink to="/products/men" className="listing-link">Create a Listing</NavLink>
+                
+               
             </ul>
             <div>
                 
