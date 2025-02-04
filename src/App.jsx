@@ -7,6 +7,7 @@ import Navbar from "./components/Header/Navbar";
 import SelectAProduct from "./components/SelectAProduct";
 import Categories from "./components/Homepage/Categories";
 import WomenProducts from "./components/ProductPage/WomenProducts";
+import "../src/components/Header/header.css"
 
 // 1. createContext
 export const MyProductsContext = createContext();

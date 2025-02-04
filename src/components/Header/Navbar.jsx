@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { GrFavorite } from "react-icons/gr";
 import { VscAccount } from "react-icons/vsc";
+// import { assets } from '../../assets/assets';
+import { NavLink } from 'react-router-dom';
+
+
 
 
 
@@ -10,9 +14,20 @@ import { VscAccount } from "react-icons/vsc";
 function Navbar() {
     return (
         <div className='navbar'>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            {/* <img src={assets.logo} style={{width: "40px"}} /> */}
+
+            <ul className="navbar-links">
+                <NavLink to="/" className="nav-link">Home</NavLink>
+                <NavLink to="/products/women" className="nav-link">Women</NavLink>
+                <NavLink to="/products/men" className="nav-link">Men</NavLink>
+                <NavLink to="/products/accessories" className="nav-link">Accessories</NavLink>
+                <NavLink to="/collections" className="nav-link">Collections</NavLink>
+            </ul>
+
+
+            {/* <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/">Logo</a>
+                    <a className="navbar-brand" href="/"><img src='logo.PNG'/></a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -35,11 +50,11 @@ function Navbar() {
                                     <li><a className="dropdown-item" href="#">New Arrivals</a></li>
                                 </ul>
                             </li>
-                        </ul>
+                        </ul> */}
 
-                    </div>
+            {/* </div>
                 </div>
-                <form className="d-flex" role="search">
+                <form className="search" role="search">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     <button className="btn btn-outline-success" type="submit">Search</button>
                 </form>
@@ -49,8 +64,8 @@ function Navbar() {
 
 
 
-            </nav>
-
+            </nav> 
+  */}
 
         </div>
     )
