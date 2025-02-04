@@ -16,7 +16,7 @@ function WomenProducts() {
     return (
         <div>
             <h2></h2>
-            <ul>
+            <ul className='women-items'>
                 {womenItems.map(product => (
                     <li key={product.id}>
                         <img src={product.img}/>

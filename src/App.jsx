@@ -5,15 +5,29 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AddProduct from "./components/ManageListings/addProduct";
 import Navbar from "./components/Header/Navbar";
 import SelectAProduct from "./components/SelectAProduct";
-import Categories from "./components/Homepage/Categories";
 import WomenProducts from "./components/ProductPage/WomenProducts";
 import "../src/components/Header/header.css"
+import MenProducts from "./components/ProductPage/MenProducts";
+import Accessories from "./components/ProductPage/Accessories";
+import Background from "./components/Background/Background";
 
-// 1. createContext
+
+
+
 export const MyProductsContext = createContext();
 
 
 function App() {
+
+  let heroData = [
+      {text1:"Have a ton of", text2:"clothes you don't wear?"},
+      {text1:"Want to get rid of them", text2:"and make some good money?"},
+      {text1:"eSlay is the", text2:"solution you're looking for!"}
+
+  ]
+
+  const [heroCount, setHeroCount] = useState(2);
+
   const [products, setProducts] = useState([]);
 
   const getProducts = async () => {
@@ -36,13 +50,14 @@ function App() {
     <MyProductsContext.Provider value={{ products, setProducts }}>
       <BrowserRouter>
         <Navbar />
+        <Background heroCount={heroCount}/>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/products/women" element={<WomenProducts category="women"/>} />
-          <Route path="/products/men" element={<Categories category="men"/>} />
-          <Route path="/products/accessories" element={<Categories category="accessories"/>} />
+          <Route path="/products/men" element={<MenProducts category="men"/>} />
+          <Route path="/products/accessories" element={<Accessories category="accessories"/>} />
           <Route path="/product/:productId" element={<SelectAProduct/>} />
 
         </Routes>

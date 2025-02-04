@@ -5,6 +5,8 @@ import { GrFavorite } from "react-icons/gr";
 import { VscAccount } from "react-icons/vsc";
 // import { assets } from '../../assets/assets';
 import { NavLink } from 'react-router-dom';
+// import "../src/components/Header/header.css"
+
 
 
 
@@ -23,7 +25,9 @@ function Navbar() {
                 <NavLink to="/products/accessories" className="nav-link">Accessories</NavLink>
                 <NavLink to="/collections" className="nav-link">Collections</NavLink>
             </ul>
-
+            <div>
+                
+            </div>
 
             {/* <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">

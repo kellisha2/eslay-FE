@@ -53,7 +53,7 @@ function AddProduct() {
       </form>
       <h2>Update a Listing:</h2>
       <form>
-        <label>product id:<input type="text" /></label>
+        <label>product id:<input type="text" /></label><br/>
         <label>update category:<select className='update-item'>
           <option value="name">name</option>
           <option value="img">image</option>
@@ -66,6 +66,7 @@ function AddProduct() {
           <option value="gender">gender</option>
         </select></label>
         <label>change to:<input type="text" /></label>
+        <button type='submit'>Submit</button>
 
       </form>
       <h2>Delete a Listing:</h2>
@@ -77,6 +78,7 @@ function AddProduct() {
           <option value=""></option>
           <option value=""></option>
         </select></label>
+        <button type='submit'>Submit</button>
       </form>
 
     </div>
