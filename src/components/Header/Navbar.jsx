@@ -25,7 +25,7 @@ function Navbar() {
                                 <a className="nav-link" href="/products/women">Shop</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Accessories</a>
+                                <a className="nav-link" href="/addproduct">Accessories</a>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collections </a>
