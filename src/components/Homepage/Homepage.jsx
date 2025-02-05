@@ -1,12 +1,12 @@
 import React from 'react'
 import Navbar from '../Header/Navbar'
-// import Banner from './Banner'
+import Banner from './Banner'
 
 
 function Homepage() {
   return (
     <div>
-      {/* <Banner /> */}
+      <Banner />
     </div>
   )
 }

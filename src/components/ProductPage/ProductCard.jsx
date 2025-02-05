@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 function ProductCard({ product }) {
   return (
     <div className='product'>
-      <Link to="/">
-        <img src={product.img} alt={product.name} />
-        <h3>{product.name}</h3>
-        <p>{product.price}</p>
-      </Link>
+      <div><Link to="/product/:productId">
+        <img className="product-img" src={product.img} alt={product.name} /></Link></div>
+        <div><h3 className='product-name'>{product.name}</h3></div>
+        <p className='product-price' >{product.price}</p>
+    
     </div>
   )
 }

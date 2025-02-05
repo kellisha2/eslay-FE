@@ -8,8 +8,8 @@ import SelectAProduct from "./components/SelectAProduct";
 import WomenProducts from "./components/ProductPage/WomenProducts";
 import "../src/components/Header/header.css"
 import MenProducts from "./components/ProductPage/MenProducts";
-import Accessories from "./components/ProductPage/Accessories";
-import Background from "./components/Background/Background";
+
+
 import Hero from "./components/Homepage/Hero";
 
 
@@ -20,20 +20,20 @@ export const MyProductsContext = createContext();
 
 function App() {
 
-  let heroData = [
-      {text1:"Have a ton of", text2:"clothes you don't wear?"},
-      {text1:"Want to get rid of them", text2:"and make some good money?"},
-      {text1:"eSlay is the", text2:"solution you're looking for!"}
+  // let heroData = [
+  //     {text1:"Have a ton of", text2:"clothes you don't wear?"},
+  //     {text1:"Want to get rid of them", text2:"and make some good money?"},
+  //     {text1:"eSlay is the", text2:"solution you're looking for!"}
 
-  ]
+  // ]
 
-  const [heroCount, setHeroCount] = useState(0);
+  // const [heroCount, setHeroCount] = useState(0);
 
-  useEffect(() => {
-    setInterval(() => {
-      setHeroCount((count) => {return count === 2?0:count+1})
-    }, 3000)
-  }, [])
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setHeroCount((count) => {return count === 2?0:count+1})
+  //   }, 3000)
+  // }, [])
 
   const [products, setProducts] = useState([]);
 
@@ -56,24 +56,25 @@ function App() {
   return (
     <MyProductsContext.Provider value={{ products, setProducts }}>
       <BrowserRouter>
-      <Background heroCount={heroCount}/>
+      <Navbar /> 
+    {/* <Background heroCount={heroCount}/>
               <Navbar />
               <Hero 
                     heroData={heroData[heroCount]}
                     heroCount={heroCount} 
                     setHeroCount={setHeroCount}
               /> 
-        
+         */}
         
         <Routes>
-          <Route path="/" element={<Homepage 
-                   
-          />} />
+        
+          {/* <Route path="/" element={<Background />}/> */}
+          {/* <Navbar /> */}
+          <Route path='/' element={<Homepage />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/products/women" element={<WomenProducts category="women"/>} />
           <Route path="/products/men" element={<MenProducts category="men"/>} />
-          <Route path="/products/accessories" element={<Accessories category="accessories"/>} />
           <Route path="/product/:productId" element={<SelectAProduct/>} />
 
         </Routes>

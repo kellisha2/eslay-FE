@@ -7,7 +7,7 @@ function ProductPage() {
 
   return (
     <div className='product-page'>
-      <h1>ProductPage</h1>
+      <h1 >All Product</h1>
       {products &&
         products.map((product, index) => (
           <ProductCard product={product} key={index}/>
