@@ -1,6 +1,8 @@
 import React from 'react'
 
 function SelectAProduct({product}) {
+
+  const {productId} 
   return (
     <div>
         <section className='images'>
