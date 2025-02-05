@@ -21,7 +21,7 @@ function Navbar() {
             <ul className="navbar-links">
                 <NavLink to="/" className="nav-link">Home</NavLink>
                 <NavLink to="/allproducts" className="nav-link">Shop</NavLink>
-                <NavLink to="/products/men" className="listing-link">Create a Listing</NavLink>
+                <NavLink to="/addproduct" className="listing-link">Create a Listing</NavLink>
                 
                
             </ul>

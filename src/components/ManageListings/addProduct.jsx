@@ -35,6 +35,25 @@ function AddProduct() {
       .then(response => console.log(response))
       .catch(error => console.error(error));
     }
+
+    const updateData = async (id, updatedData) =>{
+      try {
+        const response = await fetch(`api/products/${id}`, {
+          method:'PUT',
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedData)
+        })
+        const result = await response.json();
+        console.log('Updated successfully' , result)
+      } catch(error) {
+        console.log('Error: Update not complete' , error)
+      }
+
+    }
+
+
   return (
     <div>
       <h1>Manage Your Listings</h1>

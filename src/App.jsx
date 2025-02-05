@@ -27,7 +27,7 @@ function App() {
 
   ]
 
-  const [heroCount, setHeroCount] = useState(2);
+  const [heroCount, setHeroCount] = useState(0);
 
   useEffect(() => {
     setInterval(() => {
@@ -56,16 +56,19 @@ function App() {
   return (
     <MyProductsContext.Provider value={{ products, setProducts }}>
       <BrowserRouter>
+      <Background heroCount={heroCount}/>
+              <Navbar />
+              <Hero 
+                    heroData={heroData[heroCount]}
+                    heroCount={heroCount} 
+                    setHeroCount={setHeroCount}
+              /> 
         
-        <Background heroCount={heroCount}/>
-        <Navbar />
-        <Hero 
-              heroData={heroData[heroCount]}
-              heroCount={heroCount} 
-              setHeroCount={setHeroCount}
-        />
+        
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<Homepage 
+                   
+          />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/products/women" element={<WomenProducts category="women"/>} />

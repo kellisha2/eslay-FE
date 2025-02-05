@@ -6,7 +6,7 @@ function ProductPage() {
   const { products } = useContext(MyProductsContext);
 
   return (
-    <div className='productPage'>
+    <div className='product-page'>
       <h1>ProductPage</h1>
       {products &&
         products.map((product, index) => (
