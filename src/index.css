@@ -31,10 +31,11 @@ a {
 }
 
 .hero-text {
-    color: white;
-    font-size: 110px;
+    color: #8A2BE2;
+    font-size: 90px;
     font-weight: 500;
     line-height: 130px;
+    
 }
 
 .how {
@@ -48,6 +49,7 @@ a {
     border-radius: 60px;
     background-color: white;
     cursor: pointer;
+    
 }
 
 .how p {
@@ -95,8 +97,9 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 120px;
+    padding: 10px 60px;
     color: white;
+    background: white;
 }
 
 

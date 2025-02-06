@@ -32,19 +32,32 @@ function SelectAProduct() {
   }, []);
 
   return (
-    <section>
-      <div className='images'>
-        <img src={product.img} alt={product.name} />
-      </div>
-      <div className='item-details'>
-        <h2>{product.name}</h2>
-        <span>{product.price}</span>
-        <p>{product.description}</p>
-        <p>{product.size}</p>
-        <p>{product.brand}</p>
-        <p>Condition: {product.condition}</p>
-      </div>
-    </section>
+    <section className="flex items-start space-x-6 p-4">
+    {/* Image Section */}
+    <div className="w-1/3">
+      <img src={product.img} alt={product.name} className="w-full h-auto object-cover rounded-lg" />
+    </div>
+  
+    {/* Product Details */}
+    <div className="w-1/3 border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
+      <h2 className="text-lg font-semibold">{product.name}</h2>
+      <span className="block text-gray-700 font-bold">${product.price}</span>
+      <p className="text-gray-600">{product.description}</p>
+      <p className="text-gray-500">Size: {product.size}</p>
+      <p className="text-gray-500">Brand: {product.brand}</p>
+      <p className="text-gray-500">Condition: {product.condition}</p>
+    </div>
+  
+    {/* Button Section */}
+    <div className="w-1/3 flex items-center">
+      <button
+        type="button"
+        className="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:focus:ring-yellow-900"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </section>
   )
 }
 
