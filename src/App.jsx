@@ -9,12 +9,6 @@ import WomenProducts from "./components/ProductPage/WomenProducts";
 import "../src/components/Header/header.css"
 import MenProducts from "./components/ProductPage/MenProducts";
 
-
-import Hero from "./components/Homepage/Hero";
-
-
-
-
 export const MyProductsContext = createContext();
 
 
@@ -54,29 +48,17 @@ function App() {
 
 
   return (
-    <MyProductsContext.Provider value={{ products, setProducts }}>
+    <MyProductsContext.Provider value={{ products, setProducts, getProducts }}>
       <BrowserRouter>
       <Navbar /> 
-    {/* <Background heroCount={heroCount}/>
-              <Navbar />
-              <Hero 
-                    heroData={heroData[heroCount]}
-                    heroCount={heroCount} 
-                    setHeroCount={setHeroCount}
-              /> 
-         */}
-        
         <Routes>
-        
-          {/* <Route path="/" element={<Background />}/> */}
-          {/* <Navbar /> */}
           <Route path='/' element={<Homepage />} />
           <Route path="/products" element={<ProductPage />} />
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/products/women" element={<WomenProducts category="women"/>} />
           <Route path="/products/men" element={<MenProducts category="men"/>} />
+          <Route path="/update/:productId" element={<SelectAProduct/>} />
           <Route path="/product/:productId" element={<SelectAProduct/>} />
-
         </Routes>
       </BrowserRouter>
     </MyProductsContext.Provider>

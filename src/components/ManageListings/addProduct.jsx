@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { MyProductsContext } from '../../App';
 
 function AddProduct() {
+  const {getProducts} = useContext(MyProductsContext);
+
   const [product, setProduct] = useState({
     name: "",
     img: "",
@@ -14,6 +17,7 @@ function AddProduct() {
   })
 
   const handleChange = (event) => {
+    console.log(event.target.value)
     const { name, value } = event.target;
     setProduct((previous) => ({
       ...previous,
@@ -32,7 +36,12 @@ function AddProduct() {
       body: JSON.stringify(product)
     })
       .then(data => data.json())
-      .then(response => console.log(response))
+      .then(response => {
+        if(response._id) {
+          alert("Product added successfully");
+          getProducts();
+        }
+      })
       .catch(error => console.error(error));
   }
 
@@ -66,11 +75,11 @@ function AddProduct() {
           <label className='mt-3'>image URL:</label><input className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm' type="text" name="img" onChange={handleChange} /><br />
           <label className='mt-3'>price:</label><input className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm' type="text" name="price" onChange={handleChange} /><br />
           <label className='mt-3'>description:</label><input className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm' type="text" name="description" onChange={handleChange} /><br />
-          <label className='mt-3'>size:</label><select onChange={handleChange} className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500'>
-            <option value="">Small</option>
-            <option value="">Medium</option>
-            <option value="">Large</option>
-            <option value="">X-Large</option>
+          <label className='mt-3'>size:</label><select onChange={handleChange} name="size" className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500'>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="X-Large">X-Large</option>
           </select><br />
           <label className='mt-3'>brand:</label><input className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm' type="text" name="brand" onChange={handleChange} /><br />
           <label className='mt-3'>condition:</label><input className='mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500' type="text" name="condition" onChange={handleChange} /><br />

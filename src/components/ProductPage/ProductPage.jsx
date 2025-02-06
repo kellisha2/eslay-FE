@@ -31,7 +31,7 @@ function ProductPage() {
       </div>
 
 
-        <Title />
+        
       <div className='flex justify-between text-base sm:text-2x1 mb-4'>
       
 
@@ -46,7 +46,7 @@ function ProductPage() {
 
       </div>
       <h1 >All Products</h1>
-     <div className='grid grid-cols-4 gap-4 gap-y-6 h-200px'>
+     <div className='grid grid-cols-4 gap-4 gap-y-6'>
       
       {products &&
         products.map((product, index) => (
