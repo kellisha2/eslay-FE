@@ -8,6 +8,7 @@ import SelectAProduct from "./components/SelectAProduct";
 import WomenProducts from "./components/ProductPage/WomenProducts";
 import "../src/components/Header/header.css"
 import MenProducts from "./components/ProductPage/MenProducts";
+import UpdateProduct from "./components/UpdateProduct/UpdateProduct";
 
 export const MyProductsContext = createContext();
 
@@ -57,7 +58,7 @@ function App() {
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/products/women" element={<WomenProducts category="women"/>} />
           <Route path="/products/men" element={<MenProducts category="men"/>} />
-          <Route path="/update/:productId" element={<SelectAProduct/>} />
+          <Route path="/update/:productId" element={<UpdateProduct/>} />
           <Route path="/product/:productId" element={<SelectAProduct/>} />
         </Routes>
       </BrowserRouter>

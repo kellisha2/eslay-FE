@@ -45,22 +45,6 @@ function AddProduct() {
       .catch(error => console.error(error));
   }
 
-  const updateData = async (id, updatedData) => {
-    try {
-      const response = await fetch(`api/products/${id}`, {
-        method: 'PUT',
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updatedData)
-      })
-      const result = await response.json();
-      console.log('Updated successfully', result)
-    } catch (error) {
-      console.log('Error: Update not complete', error)
-    }
-
-  }
 
 
   return (
@@ -89,25 +73,7 @@ function AddProduct() {
         </form>
       </div>
 
-        <div className='mt-3 border-3 border-gray-500 rounded-xl p-4 shadow-lg'>
-        <h2 className='mt-3'>Update a Listing:</h2>
-        <form>
-          <label className='mt-3'>product id:<input className='mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500' type="text" /></label><br />
-          <label className='mt-3'>update category:<select className=' mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500'>
-            <option value="">Select:</option>
-            <option value="name">name</option>
-            <option value="img">image</option>
-            <option value="price">price</option>
-            <option value="description">description</option>
-            <option value="size">size</option>
-            <option value="brand">brand</option>
-            <option value="condition">condition</option>
-            <option value="category">category</option>
-            <option value="gender">gender</option>
-          </select></label>
-          <label className='mt-3'>change to:<input className='mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500' type="text" /></label>
-          <div><button className='mt-3 bg-slate-400 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded mt-3' type='submit'>Submit</button></div>
-        </form></div>
+        
 
         <div className='mt-3 border-3 border-gray-500 rounded-xl p-4 shadow-lg'>
         <h2 className='mt-3' >Delete a Listing:</h2>

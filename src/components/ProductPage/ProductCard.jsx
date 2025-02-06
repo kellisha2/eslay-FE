@@ -33,15 +33,11 @@ function ProductCard({ product }) {
         <p className='product-price' >{product.price}</p>
 
         <div className='buttons'>
-          <Link to="/update/:id" className='btn-danger' onClick={() => handleUpdate(product._id)}>Update</Link>
+           <Link to={`/update/${product._id}`}>Update</Link>
           <button className='btn-danger' onClick={() => handleDelete(product._id)}>Delete</button>
         </div>
       </div>
-
-
     </div>
-
-
   )
 }
 
