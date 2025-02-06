@@ -49,10 +49,10 @@ function AddProduct() {
   return (
     
     <div className='mt-5  sm:mx-auto sm:w-full sm:max-w-md m-12 '>
-      <h1 className='' >Manage Your Listings</h1>
+      <h1 className='' >Create a Listing</h1>
       <div className='border-3 border-gray-500 rounded-xl p-4 shadow-lg'>
         
-        <h2>Add a Listing:</h2>
+        <h2>Add a Product:</h2>
         <form className='mb-0 space-y-6 ' onSubmit={handleSubmit}>
           <label className='block text-medium font medium text-gray-700'>name:</label><input className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500' type="text" name="name" onChange={handleChange} /><br />
           <label className='mt-3'>image URL:</label><input className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm' type="text" name="img" onChange={handleChange} /><br />
