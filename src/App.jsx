@@ -15,8 +15,8 @@ export const MyProductsContext = createContext();
 
 function App() {
 
-  const [isAdmin, setIsAdmin ] = useState(false);
-  const [products, setProducts] = useState([]);
+  const [isAdmin, setIsAdmin ] = useState(false); //Toggle state
+  const [products, setProducts] = useState([]);   //Data state
 
   const getProducts = async () => {
     try {

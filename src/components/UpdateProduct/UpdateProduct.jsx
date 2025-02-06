@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { MyProductsContext } from '../../App';
 
 const UpdateProduct = () => {
-    const { productId } = useParams();
+    const { productId } = useParams(); // to get the product id from the URL 
       const {getProducts} = useContext(MyProductsContext);
     
     const [product, setProduct] = useState({
@@ -19,7 +19,7 @@ const UpdateProduct = () => {
     })
 
 
-    useEffect(() => {
+    useEffect(() => {                           //use the id from the useParams hook to get all the product details for that specific id to fill the form use the get product by id route 
         fetch(`/api/products/${productId}`, {
             headers: {
                 "Content-Type": "application/json",
@@ -29,7 +29,7 @@ const UpdateProduct = () => {
             .then(data => data.json())
             .then(response => {
                 if (response) {
-                    setProduct(response);
+                    setProduct(response);  // once we get the id we set it to the product state using the setProduct setter function
                 }
             });
     }, [])
@@ -37,7 +37,7 @@ const UpdateProduct = () => {
     const handleChange = (event) => {
         const { name, value } = event.target;
         setProduct((previous) => ({
-            ...previous,
+            ...previous,   // keeps the other fields unchanged 
             [name]: value,
         }));
     };

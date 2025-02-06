@@ -19,7 +19,7 @@ function ProductCard({ product }) {
         .then(response => {
           if (response) {
             alert("Product delete successfully");
-            getProducts();
+            getProducts();  //add this function to get the latest products so we don't have to refresh to see the deletion
           }
         });
     }
