@@ -8,27 +8,12 @@ import SelectAProduct from "./components/SelectAProduct";
 import WomenProducts from "./components/ProductPage/WomenProducts";
 import MenProducts from "./components/ProductPage/MenProducts";
 import UpdateProduct from "./components/UpdateProduct/UpdateProduct";
-import "../src/components/Header/header.css"
+// import "../src/components/Header/header.css"
 
 export const MyProductsContext = createContext();
 
 
 function App() {
-
-  // let heroData = [
-  //     {text1:"Have a ton of", text2:"clothes you don't wear?"},
-  //     {text1:"Want to get rid of them", text2:"and make some good money?"},
-  //     {text1:"eSlay is the", text2:"solution you're looking for!"}
-
-  // ]
-
-  // const [heroCount, setHeroCount] = useState(0);
-
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     setHeroCount((count) => {return count === 2?0:count+1})
-  //   }, 3000)
-  // }, [])
 
   const [isAdmin, setIsAdmin ] = useState(false);
   const [products, setProducts] = useState([]);

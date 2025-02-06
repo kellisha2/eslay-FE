@@ -59,33 +59,42 @@ function AddProduct() {
           <label className='mt-3'>price:</label><input className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm' type="text" name="price" onChange={handleChange} /><br />
           <label className='mt-3'>description:</label><input className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm' type="text" name="description" onChange={handleChange} /><br />
           <label className='mt-3'>size:</label><select onChange={handleChange} name="size" className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500'>
+            <option value=""></option>
             <option value="Small">Small</option>
             <option value="Medium">Medium</option>
             <option value="Large">Large</option>
             <option value="X-Large">X-Large</option>
           </select><br />
           <label className='mt-3'>brand:</label><input className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm' type="text" name="brand" onChange={handleChange} /><br />
-          <label className='mt-3'>condition:</label><input className='mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500' type="text" name="condition" onChange={handleChange} /><br />
-          <label className='mt-3'>category:</label><input className='mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500' type="text" name="category" onChange={handleChange} /><br />
-          <label className='mt-3'>gender:</label><input className='mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500' type="text" name="gender" onChange={handleChange} />
+          <label className='mt-3'>condition:</label><select onChange={handleChange} name="condition" className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500'>
+            <option value=""></option>
+            <option value="New">New</option>
+            <option value="Like New">Like New</option>
+            <option value="Very Good">Very Good</option>
+            <option value="Good">Good</option>
+            <option value="Acceptable">Acceptable</option>
+            </select><br />
+          <label className='mt-3'>category:</label><select onChange={handleChange} name="category" className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500'>
+            <option value=""></option>
+            <option value="Top">Top</option>
+            <option value="Bottom">Bottom</option>
+            <option value="Dress">Dress</option>
+            <option value="Outerwear">Outerwear</option>
+            <option value="Jumpsuit">Jumpsuit</option>
+            <option value="Matching Set">Matching Set</option>
+            </select><br />
+          <label className='mt-3'>gender:</label><select onChange={handleChange} name="gender" className='w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500'>
+            <option value=""></option>
+            <option value="Men">Men</option>
+            <option value="Women">Women</option>
+            <option value="Unisex">Unisex</option></select>
           <div><button className='mt-3 bg-slate-400 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded' type='submit'>Submit</button></div>
         </form>
       </div>
 
         
 
-        <div className='mt-3 border-3 border-gray-500 rounded-xl p-4 shadow-lg'>
-        <h2 className='mt-3' >Delete a Listing:</h2>
-        <form>
-          <label className='mt-3'>product id:<input className='mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500' type="text" /></label>
-          <label className='mt-3'>reason:<select className='mt-3 w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500'>
-            <option value="">no inventory</option>
-            <option value="">item damaged</option>
-            <option value=""></option>
-            <option value=""></option>
-          </select></label>
-          <div><button className='mt-3 bg-slate-400 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded mb-8' type='submit'>Submit</button></div>
-        </form></div>
+  
 
       </div>
       )

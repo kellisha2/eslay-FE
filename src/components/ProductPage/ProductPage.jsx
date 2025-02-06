@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import ProductCard from './ProductCard'
 import { MyProductsContext } from '../../App'
-import Title from '../Homepage/Title'
 
 function ProductPage() {
   const { products } = useContext(MyProductsContext);
