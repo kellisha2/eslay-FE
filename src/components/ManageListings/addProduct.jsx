@@ -17,7 +17,6 @@ function AddProduct() {
   })
 
   const handleChange = (event) => {
-    console.log(event.target.value)
     const { name, value } = event.target;
     setProduct((previous) => ({
       ...previous,

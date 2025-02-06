@@ -6,9 +6,9 @@ import AddProduct from "./components/ManageListings/addProduct";
 import Navbar from "./components/Header/Navbar";
 import SelectAProduct from "./components/SelectAProduct";
 import WomenProducts from "./components/ProductPage/WomenProducts";
-import "../src/components/Header/header.css"
 import MenProducts from "./components/ProductPage/MenProducts";
 import UpdateProduct from "./components/UpdateProduct/UpdateProduct";
+import "../src/components/Header/header.css"
 
 export const MyProductsContext = createContext();
 
@@ -30,6 +30,7 @@ function App() {
   //   }, 3000)
   // }, [])
 
+  const [isAdmin, setIsAdmin ] = useState(false);
   const [products, setProducts] = useState([]);
 
   const getProducts = async () => {
@@ -49,7 +50,7 @@ function App() {
 
 
   return (
-    <MyProductsContext.Provider value={{ products, setProducts, getProducts }}>
+    <MyProductsContext.Provider value={{ products, setProducts, getProducts, isAdmin, setIsAdmin }}>
       <BrowserRouter>
       <Navbar /> 
         <Routes>

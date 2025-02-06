@@ -9,7 +9,7 @@ const Hero = ({heroData, setHeroCount, heroCount}) => {
         </div>
 
         <div className="how">
-            <a href='/addproduct'><p>How It Works</p></a>
+            <a href='/addproduct'>How It Works</a>
             
         </div>
         <div className='hero-page-move'>
