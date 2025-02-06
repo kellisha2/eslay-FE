@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useContext , useState} from 'react'
+import { useParams } from 'react-router-dom'
+import { MyProductsContext } from '../App'
 
 function SelectAProduct({product}) {
 
-  const {productId} 
+  const { products } = useContext(MyProductsContext);
+
+  const {productId} = useParams();
+
+  console.log(productId)
   return (
     <div>
         <section className='images'>
